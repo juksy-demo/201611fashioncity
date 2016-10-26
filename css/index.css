@@ -3166,6 +3166,16 @@ _:-moz-tree-row(hover), .fixedBtnCover_01 .coverWrap .main .mainWrap .item ul.sh
   }
 }
 
+.header_01 .headerWrap .visualBg {
+  background-image: url("../img/visual_m.png");
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .header_01 .headerWrap .visualBg {
+    background-image: url("../img/visual_tb.png");
+  }
+}
+
 @media screen and (min-width: 1024px) {
   .header_01 .headerWrap .visualBg {
     background-image: url("../img/visual_pc.png");
