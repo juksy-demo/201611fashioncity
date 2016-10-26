@@ -3167,7 +3167,7 @@ _:-moz-tree-row(hover), .fixedBtnCover_01 .coverWrap .main .mainWrap .item ul.sh
 }
 
 .header_01 .headerWrap .visualBg {
-  background-image: url("../img/visual_m.png");
+  background-image: url("../img/visual_m.jpg");
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
