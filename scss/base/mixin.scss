@@ -1,0 +1,186 @@
+// Media Queries mixin
+@mixin device($point) {
+  @if $point == tb { // tablet
+    @media screen and (min-width: $tablet_portrait_min_w) and (max-width: $tablet_portrait_max_w) { @content; }
+  }
+  @else if $point == pc { // desktop
+    @media screen and (min-width: $pc_landscape_min_w) { @content; }
+  }
+}
+
+// Keyframes mixin
+@mixin keyframes($name) {
+    @-webkit-keyframes #{$name} {
+        @content; 
+    }
+    @-moz-keyframes #{$name} {
+        @content;
+    }
+    @-ms-keyframes #{$name} {
+        @content;
+    }
+    @keyframes #{$name} {
+        @content;
+    } 
+}
+
+// Transition mixin
+@mixin transition($property: all, $duration: 0.5s, $timing-function: ease, $delay: 0s) {
+    -webkit-transition: $property $duration $timing-function $delay;
+    -moz-transition:    $property $duration $timing-function $delay;
+    -o-transition:      $property $duration $timing-function $delay;
+    transition:         $property $duration $timing-function $delay;
+}
+
+// Transform mixin
+@mixin transform($value: initial) {
+    -webkit-transform: $value;
+    -ms-transform:     $value;
+    -moz-transform:    $value;
+    -o-transform:      $value;
+    transform:         $value;
+}
+
+// Transform Origin mixin
+@mixin transform-origin($value: initial) {
+    -webkit-transform-origin: $value;
+    -ms-transform-origin:     $value;
+    -moz-transform-origin:    $value;
+    -o-transform-origin:      $value;
+    transform-origin:         $value;
+}
+
+// Animation mixin
+@mixin animation($value) {
+    -webkit-animation: $value;
+    -moz-animation:    $value;
+    -o-animation:      $value;
+    animation:         $value;
+}
+
+// Appearance mixin
+@mixin appearance($value) {
+    -webkit-appearance: $value;
+    -moz-appearance:    $value;
+    appearance:         $value;
+}
+
+//list style none
+@mixin list_style_none {
+    list-style: none;
+    display: block;
+}
+
+//a.img
+@mixin a_img {
+    display: block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+//a.txt for layouts
+@mixin a_txt {
+    @media screen and (min-width: $pc_landscape_min_w_extra){
+        display: inline;
+        background-image: -webkit-linear-gradient(left, transparent 50%, $black 50%);
+        background-image: linear-gradient(to right, transparent 50%, $black 50%);
+        background-position: 0;
+        background-size: 201%;
+        @include transition(all, 0.4s);
+        &:hover {
+            background-size: 200%;
+            background-position: -100%;
+            color: $white;
+        }
+    }
+}
+
+//a.img square linkWrap for layouts
+@mixin square_linkWrap {
+    position: relative;
+    overflow: hidden;
+    .linkWrap {
+        width: 81%;
+        height: 80%;
+        padding: 10%;
+        background-color: $pink_90;
+        color: $white;
+        font-weight: bold;
+        opacity: 0;
+        @include transition;
+        .linkBorder {
+            height: 65%;
+            border: 1px solid $white;
+            padding-top: 35%;
+            text-align: center;
+            .ch {
+                display: block;
+            }
+        }
+    }
+    &:hover {
+        .linkWrap {
+            opacity: 1;
+        }
+        .arrow {
+            @include animation(arrow_move $arrow_time linear infinite);
+        }
+    }
+}
+
+//a.img fbsize linkWrap for layouts
+@mixin fbsize_linkWrap {
+    position: relative;
+    overflow: hidden;
+    .linkWrap {
+        width: 89%;
+        height: initial;
+        padding: 6%;
+        background-color: $pink_90;
+        color: $white;
+        font-weight: bold;
+        opacity: 0;
+        @include transition;
+        .linkBorder {
+            border: 1px solid $white;
+            padding-top: 13%;
+            padding-bottom: 14%;
+            text-align: center;
+            @media screen and (min-width: $m_portrait_max_w) and (max-width: $tablet_portrait_min_w) {
+                padding-top: 13%;
+                padding-bottom: 15.5%;
+            }
+            @media screen and (min-width: $tablet_portrait_min_w) and (max-width: $tablet_portrait_max_w) {
+                padding-top: 17%;
+                padding-bottom: 16%;
+            }
+            @media screen and (min-width: $pc_landscape_min_w) {
+                padding-top: 15%;
+                padding-bottom: 15.5%;
+            }
+            .ch {
+                display: block;
+            }
+        }
+    }
+    &:hover {
+        .linkWrap {
+            opacity: 1;
+        }
+        .arrow {
+            @include animation(arrow_move $arrow_time linear infinite);
+        }
+    }
+}
+
+//category for layouts
+@mixin category {
+    border-bottom: 1px solid $black;
+    padding: 3px 5px;
+    display: none;
+    @media screen and (min-width: $pc_landscape_min_w) {
+        display: inline-block;
+        margin-bottom: 1em;
+    }
+}
