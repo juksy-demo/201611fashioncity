@@ -3263,6 +3263,10 @@ _:-moz-tree-row(hover), .fixedBtnCover_01 .coverWrap .main .mainWrap .item ul.sh
   background-color: rgba(146, 186, 211, 0.4);
 }
 
+.layout_05 .layoutWrap ul.article li .txtWrap a.txt {
+  text-align: center;
+}
+
 .layout_06 .layoutWrap ul.article li a.img .linkWrap {
   background-color: rgba(146, 186, 211, 0.4);
 }

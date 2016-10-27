@@ -205,6 +205,7 @@
                 }
                 .txtWrap {
                     a.txt {
+                        text-align: center;
                         h3 {
                             @media screen and (min-width: $pc_landscape_min_w_extra) {
                                 //background-image: -webkit-linear-gradient(left, transparent 50%, #00a9b7 50%);
