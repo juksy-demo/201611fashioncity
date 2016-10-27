@@ -52,11 +52,11 @@
             //background-position: center top;
             @media screen and (min-width: $tablet_portrait_min_w) and (max-width: $tablet_portrait_max_w) {
                 //平板－主視覺圖片
-                background-image: url('../img/visual_tb.png');
+                background-image: url('../img/visual_tb.jpg');
             }
             @media screen and (min-width: $pc_landscape_min_w) {
                 //桌機－主視覺圖片
-                background-image: url('../img/visual_pc.png');
+                background-image: url('../img/visual_pc.jpg');
             }
         }
         .detail {
