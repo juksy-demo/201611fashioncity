@@ -327,7 +327,12 @@ ul.fixedBtn_01 {
     }
 }
 
-// checkbox can't be transparent, fixed for firefox
+// checkbox can't be transparent, fixed for firefox*
 _:-moz-tree-row(hover), .fixedBtnCover_01 .coverWrap .main .mainWrap .item ul.share li .material_btn input.toggle[type="checkbox"], ul.fixedBtn_01 li .material_btn input.toggle[type="checkbox"] {
+    display: none;
+}
+
+// checkbox can't be transparent, fixed for IE/edge<=7
+.selector, .fixedBtnCover_01 .coverWrap .main .mainWrap .item ul.share li .material_btn input.toggle[type="checkbox"], ul.fixedBtn_01 li .material_btn input.toggle[type="checkbox"] {
     display: none;
 }

@@ -1435,7 +1435,7 @@ img {
 
 @media screen and (min-width: 1024px) {
   .header_01 .headerWrap .detail .detailWrap .txtWrap .txtWidth .txt {
-    width: 90%;
+    width: 655px;
     max-height: 5.4em;
     margin: 0;
     padding-bottom: 20px;
@@ -3133,6 +3133,10 @@ ul.fixedBtn_01 li .material_btn .toggle:not(:checked) + .anim:after {
 }
 
 _:-moz-tree-row(hover), .fixedBtnCover_01 .coverWrap .main .mainWrap .item ul.share li .material_btn input.toggle[type="checkbox"], ul.fixedBtn_01 li .material_btn input.toggle[type="checkbox"] {
+  display: none;
+}
+
+.selector, .fixedBtnCover_01 .coverWrap .main .mainWrap .item ul.share li .material_btn input.toggle[type="checkbox"], ul.fixedBtn_01 li .material_btn input.toggle[type="checkbox"] {
   display: none;
 }
 
